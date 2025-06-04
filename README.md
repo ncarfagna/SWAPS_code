@@ -45,6 +45,7 @@ BRIEF DESCRIPTION OF SWAPS WORKFLOW
 
 
 IMPORTING TRACES AND STATION DATA
+
 Once the input files have been placed in the same directory as start_SWAPS.m and the functions folder, and the program has been launched, clicking the 'Select Input' button will allow the user to first select the station file, followed by the seismic trace file. These files may have different names than those used in the example.
 At this stage, two interactive windows will appear:
 
@@ -52,12 +53,14 @@ At this stage, two interactive windows will appear:
  - The second allows the user to define the time windows over the whole traces on which the analysis will be performed.
 
 FREQUENCY AND TIME-DOMAIN ANALYSIS
+
 Once the traces have been imported and the time windows selected, average cross-correlation and coherence functions are computed across all selected windows and displayed in the program’s main interface.
 Both frequency- and time-domain analyses can be repeated multiple times by adjusting the available parameters to better suit the specific context.
 Phase dispersion curves can be extracted using either manual or automatic picking. Once a phase picking has been performed, a corresponding synthetic group velocity curve can be plotted on top of the frequency–group velocity plot generated from the time-domain analysis. Multiple phase dispersion curves can be selected one at a time, allowing the user to evaluate the fit between the FTAN analysis results and the corresponding synthetic group velocity curves.
 Each time a new picking is performed—either manual or automatic—upper and lower boundary curves are estimated for the selected phase dispersion curve, representing uncertainty bounds at each frequency.
 
-SAVING RESULTS
+SAVING RESULTS 
+
 Once the most suitable phase dispersion curve has been selected, the results can be saved by clicking the 'Save' button. A new project can be created in the form of a new directory, within which a subdirectory corresponding to the current analysis will be generated.
 If a project folder already exists, it can be selected, and a new subdirectory containing the current analysis results will be created within it. The following results can be saved:
 
