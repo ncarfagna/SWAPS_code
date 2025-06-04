@@ -44,6 +44,7 @@ In the first case a normal dispersion analysis (between two or more stations) ca
 BRIEF DESCRIPTION OF SWAPS WORKFLOW
 
 
+
 IMPORTING TRACES AND STATION DATA
 
 Once the input files have been placed in the same directory as start_SWAPS.m and the functions folder, and the program has been launched, clicking the 'Select Input' button will allow the user to first select the station file, followed by the seismic trace file. These files may have different names than those used in the example.
@@ -52,12 +53,16 @@ At this stage, two interactive windows will appear:
  - The first allows the user to select which traces to analyze (two or more);
  - The second allows the user to define the time windows over the whole traces on which the analysis will be performed.
 
+
+
 FREQUENCY AND TIME-DOMAIN ANALYSIS
 
 Once the traces have been imported and the time windows selected, average cross-correlation and coherence functions are computed across all selected windows and displayed in the program’s main interface.
 Both frequency- and time-domain analyses can be repeated multiple times by adjusting the available parameters to better suit the specific context.
 Phase dispersion curves can be extracted using either manual or automatic picking. Once a phase picking has been performed, a corresponding synthetic group velocity curve can be plotted on top of the frequency–group velocity plot generated from the time-domain analysis. Multiple phase dispersion curves can be selected one at a time, allowing the user to evaluate the fit between the FTAN analysis results and the corresponding synthetic group velocity curves.
 Each time a new picking is performed—either manual or automatic—upper and lower boundary curves are estimated for the selected phase dispersion curve, representing uncertainty bounds at each frequency.
+
+
 
 SAVING RESULTS 
 
@@ -78,19 +83,20 @@ If the user chooses to save the experimental group velocity curve, an additional
 
 
 LIST OF MAIN FUNCTIONS IN THE FUNCTIONS DIRECTORY
+
 Beow is a list of the main routines included in the functions folder, each accompanied by a brief description of its purpose, along with the expected input and output parameters.
 
 
-select_data_new.m
-Used to select the stations to analyze and define the sampling frequency for the measurements.
+select_data_new.m:
+ - Used to select the stations to analyze and define the sampling frequency for the measurements.
 
 
-import_sig_sta_new.m
-Used to select time windows on the seismic traces based on parameters chosen interactively by the user, including start and end times, window width and overlap, and an amplitude threshold for window rejection.
+import_sig_sta_new.m:
+ - Used to select time windows on the seismic traces based on parameters chosen interactively by the user, including start and end times, window width and overlap, and an amplitude threshold for window rejection.
 
 
-cross_cohe.m
-Function that internally calls crosscorr_2.m and coherence_2.m, which compute the average cross-correlation function and the average coherence function, respectively, across all previously selected time windows. It also calls splineLSQR.m to smooth the coherence function. It takes all time windows as input.
+cross_cohe.m: 
+ - Function that internally calls crosscorr_2.m and coherence_2.m, which compute the average cross-correlation function and the average coherence function, respectively, across all previously selected time windows. It also calls splineLSQR.m to smooth the coherence function. It takes all time windows as input.
 
 
 f_SN.m
